@@ -37,7 +37,7 @@ dependencies {
 }
 
 group = 'io.github.guicamest'
-version = '0.1.0-SNAPSHOT'
+version = '0.1.0'
 
 plugindev {
     pluginId 'io.github.guicamest.assetfilegenerator'
@@ -52,6 +52,15 @@ plugindev {
     projectUrl 'https://github.com/guicamest/assetfilegenerator'
     projectInceptionYear '2015'
     done() // do not omit this
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    pkg.repo = 'maven'
 }
 
 uploadArchives {

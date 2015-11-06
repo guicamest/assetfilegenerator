@@ -19,7 +19,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'io.github.guicamest:assetfilegenerator:0.1.0-SNAPSHOT'
+        classpath 'io.github.guicamest:assetfilegenerator:0.1.0'
     }
 }
 apply plugin: 'com.android.application'
