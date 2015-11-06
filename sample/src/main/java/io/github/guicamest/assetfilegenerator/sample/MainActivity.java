@@ -25,9 +25,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import io.github.guicamest.assetfilegenerator.sample.Asset;
-import io.github.guicamest.assetfilegenerator.sample.R;
-
 
 public class MainActivity extends Activity {
     private TextView textView;
