@@ -25,8 +25,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import io.github.guicamest.assetfilegenerator.sample.assetfilegenerator.Asset;
-import io.github.guicamest.assetfilegenerator.sample.assetfilegenerator.R;
+import io.github.guicamest.assetfilegenerator.sample.Asset;
+import io.github.guicamest.assetfilegenerator.sample.R;
 
 
 public class MainActivity extends Activity {
@@ -40,17 +40,26 @@ public class MainActivity extends Activity {
         textView = (TextView) findViewById(R.id.text_view);
     }
 
-    public void onLoadImageClick(View v) {
+    public void onLoadAsset(View v) {
+        loadAssetToTextView(Asset.LOREMIPSUM);
+    }
+
+    public void onLoadNestedAsset(View v) {
+        loadAssetToTextView(Asset.SOMEDIR.OTHERIPSUM);
+    }
+
+    private void loadAssetToTextView(Asset a){
         try {
             // TODO: Yes ,this should not be done in the main thread. Sorry Kittens.
-            InputStream a = Asset.LOREMIPSUM.open(this);
-            BufferedReader br = new BufferedReader(new InputStreamReader(a));
+            InputStream is = a.open(this);
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
             StringBuilder sb = new StringBuilder();
             String line;
             while( (line = br.readLine()) != null ){
                 sb.append(line);
             }
             textView.setText(sb.toString());
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -6,11 +6,21 @@
                 android:padding="10dp"
                 tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_horizontal">
     <Button android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text="@string/load_asset"
-        android:onClick="onLoadImageClick"/>
+        android:onClick="onLoadAsset"/>
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/load_nested_asset"
+        android:onClick="onLoadNestedAsset"/>
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/ScrollView01"
