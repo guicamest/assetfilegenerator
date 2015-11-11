@@ -52,8 +52,11 @@ plugindev {
     done() // do not omit this
 }
 
+File props = project.rootProject.file('local.properties')
 Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+if ( props.exists() ){
+    properties.load(props.newDataInputStream())
+}
 
 bintray {
     user = properties.getProperty("bintray.user")
