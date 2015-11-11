@@ -5,7 +5,7 @@ local.properties
 *.idea
 *.iml
 *build
-**/gradle*
+sample/gradle*
 **/bin
 **/.classpath
 **/.project
