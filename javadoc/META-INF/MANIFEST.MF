@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: assetfilegenerator
+Implementation-Version: 0.1.1
+Implementation-Vendor: Guillermo Campelo
+Implementation-Website: https://github.com/guicamest/assetfilegenerato
+ r
+Build-Date: 2015-11-11
+Build-JDK: 1.7.0
+Build-Gradle: 2.4
+Build-PluginDevPlugin: 1.0.4
+
