@@ -20,8 +20,6 @@ sed -e "s/%VERSION%/'$LATEST_VERSION'/g" website/tpl/jquery-maven-artifact.min.j
 
 curl -f -L -I "https://dl.bintray.com/$USER_ID/maven/$GROUP_PATH/$ARTIFACT_ID/$LATEST_VERSION/$ARTIFACT_ID-$LATEST_VERSION-javadoc.jar"
 
-exit
-
 DIR=temp-assetfilegenerator-clone
 
 # Delete any existing temporary website clone
