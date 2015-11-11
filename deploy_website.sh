@@ -42,9 +42,10 @@ cp -R ../website/* .
 
 # Download the latest javadoc
 curl -L "https://dl.bintray.com/$USER_ID/maven/$GROUP_PATH/$ARTIFACT_ID/$LATEST_VERSION/$ARTIFACT_ID-$LATEST_VERSION-javadoc.jar" > javadoc.zip
-mkdir javadoc
+
 #unzip javadoc.zip -d javadoc
-winrar x javadoc.zip -d javadoc
+winrar x javadoc.zip "groovydoc" -d .
+mv groovydoc javadoc
 rm javadoc.zip
 
 # Stage all files in git and create a commit
