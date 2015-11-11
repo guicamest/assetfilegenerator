@@ -1,4 +1,4 @@
-Asset File Generator (AFG)
+Asset File Generator (AFG) [![Build Status](https://travis-ci.org/guicamest/assetfilegenerator.svg?branch=master)](https://travis-ci.org/guicamest/assetfilegenerator/branches) [ ![JCenter](https://api.bintray.com/packages/guicamest/maven/assetfilegenerator/images/download.svg) ](https://bintray.com/guicamest/maven/assetfilegenerator/\_latestVersion)
 ======
 
 *That's our best asset! - Somebody*
