@@ -19,9 +19,10 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'io.github.guicamest:assetfilegenerator:0.1.0'
+        classpath 'io.github.guicamest:assetfilegenerator:0.1.1'
     }
 }
+apply plugin: 'eclipse'
 apply plugin: 'com.android.application'
 
 // Make sure to apply this plugin *after* the Android plugin
@@ -55,6 +56,3 @@ afg{
     exclude=[]
 }
 
-dependencies {
-    provided 'com.squareup.picasso:picasso:2.5.2'
-}

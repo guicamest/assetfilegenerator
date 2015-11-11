@@ -10,3 +10,6 @@ local.properties
 **/.classpath
 **/.project
 **/.settings
+website/tpl**
+website/_site
+**/src/main/gen

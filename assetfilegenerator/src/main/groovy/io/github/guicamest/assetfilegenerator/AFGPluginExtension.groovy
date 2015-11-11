@@ -26,7 +26,7 @@ class AFGPluginExtension implements Serializable {
      * Has precedence if in conflict with exclude
      * @see org.gradle.api.tasks.util.PatternFilterable
      */
-    List<String> include = ['*']
+    List<String> include = ['**/*']
 
     /**
      * Patterns to exclude from generated Assets.java

@@ -24,7 +24,6 @@ buildscript {
 }
 
 allprojects {
-	apply plugin: 'eclipse'
     apply plugin: 'idea'
     idea {
         module {
