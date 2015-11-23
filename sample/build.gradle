@@ -30,10 +30,10 @@ apply plugin: 'io.github.guicamest.assetfilegenerator'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
-        applicationId "io.github.guicamest.assetfilegenerator.sample"
+        applicationId 'io.github.guicamest.assetfilegenerator.sample'
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
