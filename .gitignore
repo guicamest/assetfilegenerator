@@ -13,3 +13,4 @@ sample/gradle*
 website/tpl**
 website/_site
 **/src/main/gen
+temp-assetfilegenerator-clone
