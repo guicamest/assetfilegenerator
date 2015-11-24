@@ -38,6 +38,10 @@ class AFGPlugin implements Plugin<Project> {
 			def inclusions = project.afg.include
 			def exclusions = project.afg.exclude - inclusions
 
+			File androidJar = project.android.bootClasspath.find{
+                it.absolutePath ==~ /.*android\-\d+.*/ && 'android.jar' == it.name
+            }
+
 			Task eclipseTask = project.getTasks().findByPath('eclipse')
 			if ( eclipseTask != null ){
 				def sourceOutputDir = new File(project.android.sourceSets.main.java.srcDirs[0].parentFile,'gen')
@@ -53,6 +57,7 @@ class AFGPlugin implements Plugin<Project> {
 					it.sourceOutputDir = sourceOutputDir
 					it.packageName = packageName
 					sourceDir = assetsDirs[0]
+					it.androidJar = androidJar
 				}
 				generateEclipseAssetsFileTask.description = 'Generate Assets.java for eclipse build.'
 				generateEclipseAssetsFileTask.group = 'IDE'
@@ -83,6 +88,7 @@ class AFGPlugin implements Plugin<Project> {
 					it.sourceOutputDir = sourceOutputDir
 					it.packageName = packageName
 					sourceDir = assetsDir
+					it.androidJar = androidJar
 				}
 				generateBuildAssetsFileTask.description = "Generate Assets.java for ${variantName} build."
 

@@ -22,6 +22,7 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
     compile 'com.squareup:javapoet:1.3.0'
+    compile 'org.javassist:javassist:3.20.0-GA'
 }
 
 apply plugin: 'maven'
@@ -35,7 +36,7 @@ dependencies {
 }
 
 group = 'io.github.guicamest'
-version = '0.1.1'
+version = '0.1.2'
 
 plugindev {
     pluginId 'io.github.guicamest.assetfilegenerator'
@@ -43,7 +44,7 @@ plugindev {
     pluginImplementationClass 'io.github.guicamest.assetfilegenerator.AFGPlugin'
     pluginDescription 'Gradle plugin that lets an Android project generate Assets.java based on assets folder.'
     pluginLicenses 'Apache-2.0'
-    pluginTags 'gradle', 'plugin', 'android', 'assets'
+    pluginTags 'gradle', 'plugin', 'android', 'assets', 'afg'
     authorId 'guicamest'
     authorName 'Guillermo Campelo'
     authorEmail 'guicamest@gmail.com'
