@@ -18,7 +18,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'io.github.guicamest:assetfilegenerator:0.1.1'
+        classpath 'io.github.guicamest:assetfilegenerator:0.1.2'
     }
 }
 
